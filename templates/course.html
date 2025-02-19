@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillUp|Course Platform</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='CSS/courses.css' )}}">
+</head>
+
+<body>
+    {% extends 'base.html' %}
+
+    {% block content %}
+    <header>
+        <div class="container">
+            <h1>All the skills you need in one place</h1>
+            <p>From critical skills to technical topics, Udemy supports your professional development.</p>
+        </div>
+    </header>
+
+    <nav class="domain-nav">
+        <div class="container">
+            <button class="domain-btn active" data-domain="data-science">Data Science</button>
+            <button class="domain-btn" data-domain="it-cert">IT Certifications</button>
+            <button class="domain-btn" data-domain="leadership">Leadership</button>
+            <button class="domain-btn" data-domain="web-dev">Web Development</button>
+            <button class="domain-btn" data-domain="communication">Communication</button>
+            <button class="domain-btn" data-domain="business">Business Analytics & Intelligence</button>
+        </div>
+    </nav>
+
+    <div class="categories-carousel">
+        <div class="container">
+            <!-- <button class="carousel-btn prev" onclick="scrollCategories('left')">&lt;</button> -->
+            <div class="categories-wrapper">
+                <div class="categories" id="categories">
+                    <!-- Data Science Categories -->
+                    <div class="category-group active" data-domain="data-science">
+                        <div class="category-pill">
+                            <h3>ChatGPT</h3>
+                            <p>4M+ learners</p>
+                        </div>
+                        <div class="category-pill">
+                            <h3>Data Science</h3>
+                            <p>7M+ learners</p>
+                        </div>
+                        <div class="category-pill">
+                            <h3>Python</h3>
+                            <p>47.7M+ learners</p>
+                        </div>
+                        <div class="category-pill">
+                            <h3>Machine Learning</h3>
+                            <p>8M+ learners</p>
+                        </div>
+                        <div class="category-pill">
+                            <h3>Deep Learning</h3>
+                            <p>2M+ learners</p>
+                        </div>
+                        <div class="category-pill">
+                            <h3>Artificial Intelligence (AI)</h3>
+                            <p>3M+ learners</p>
+                        </div>
+                        <div class="category-pill">
+                            <h3>Statistics</h3>
+                            <p>1M+ learners</p>
+                        </div>
+                        <!-- <div class="category-pill">
+                            <h3>Natural Language</h3>
+                            <p>800K+ learners</p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <!-- <button class="carousel-btn next" onclick="scrollCategories('right')">&gt;</button> -->
+        </div>
+    </div>
+
+    <main class="container">
+        <div class="course-grid">
+            <!-- Data Science Courses -->
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop&q=60"
+                        alt="ChatGPT Course">
+                    <div class="course-details">
+                        <h4>Course Details:</h4>
+                        <ul>
+                            <li>How to recognize the role of ChatGPT in digital marketing</li>
+                            <li>How to identify the functions of ChatGPT that can be used for improving digital
+                                marketing strategy</li>
+                            <li>How to optimize daily marketing routine with the help of ChatGPT</li>
+                        </ul>
+                    </div>
+                    <span class="badge premium">Premium</span>
+                    <span class="badge bestseller">Bestseller</span>
+                </div>
+                <div class="course-info">
+                    <h3>ChatGPT Complete Guide: Learn Generative AI, ChatGPT & More</h3>
+                    <p class="instructor">Julian Melanson, Benza Maman</p>
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-number">4.5</span>
+                        <span class="reviews">(44,274)</span>
+                    </div>
+                    <div class="price-action">
+                        <span class="price">₹2,699</span>
+                        <div class="button-group">
+                            <a href="{{url_for('coursedetail')}}"><button class="action-btn view-btn">View Course</button></a>
+                            <button class="action-btn cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop&q=60"
+                        alt="ChatGPT Course">
+                    <div class="course-details">
+                        <h4>Course Details:</h4>
+                        <ul>
+                            <li>How to recognize the role of ChatGPT in digital marketing</li>
+                            <li>How to identify the functions of ChatGPT that can be used for improving digital
+                                marketing strategy</li>
+                            <li>How to optimize daily marketing routine with the help of ChatGPT</li>
+                        </ul>
+                    </div>
+                    <span class="badge premium">Premium</span>
+                    <span class="badge bestseller">Bestseller</span>
+                </div>
+                <div class="course-info">
+                    <h3>ChatGPT Complete Guide: Learn Generative AI, ChatGPT & More</h3>
+                    <p class="instructor">Julian Melanson, Benza Maman</p>
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-number">4.5</span>
+                        <span class="reviews">(44,274)</span>
+                    </div>
+                    <div class="price-action">
+                        <span class="price">₹2,699</span>
+                        <div class="button-group">
+                            <button class="action-btn view-btn">View Course</button>
+                            <button class="action-btn cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop&q=60"
+                        alt="ChatGPT Course">
+                    <div class="course-details">
+                        <h4>Course Details:</h4>
+                        <ul>
+                            <li>How to recognize the role of ChatGPT in digital marketing</li>
+                            <li>How to identify the functions of ChatGPT that can be used for improving digital
+                                marketing strategy</li>
+                            <li>How to optimize daily marketing routine with the help of ChatGPT</li>
+                        </ul>
+                    </div>
+                    <span class="badge premium">Premium</span>
+                    <span class="badge bestseller">Bestseller</span>
+                </div>
+
+                <div class="course-info">
+                    <h3>ChatGPT Complete Guide: Learn Generative AI, ChatGPT & More</h3>
+                    <p class="instructor">Julian Melanson, Benza Maman</p>
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-number">4.5</span>
+                        <span class="reviews">(44,274)</span>
+                    </div>
+                    <div class="price-action">
+                        <span class="price">₹2,699</span>
+                        <div class="button-group">
+                            <button class="action-btn view-btn">View Course</button>
+                            <button class="action-btn cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop&q=60"
+                        alt="ChatGPT Course">
+                    <div class="course-details">
+                        <h4>Course Details:</h4>
+                        <ul>
+                            <li>How to recognize the role of ChatGPT in digital marketing</li>
+                            <li>How to identify the functions of ChatGPT that can be used for improving digital
+                                marketing strategy</li>
+                            <li>How to optimize daily marketing routine with the help of ChatGPT</li>
+                        </ul>
+                    </div>
+                    <span class="badge premium">Premium</span>
+                    <span class="badge bestseller">Bestseller</span>
+                </div>
+                <div class="course-info">
+                    <h3>ChatGPT Complete Guide: Learn Generative AI, ChatGPT & More</h3>
+                    <p class="instructor">Julian Melanson, Benza Maman</p>
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-number">4.5</span>
+                        <span class="reviews">(44,274)</span>
+                    </div>
+                    <div class="price-action">
+                        <span class="price">₹2,699</span>
+                        <div class="button-group">
+                            <button class="action-btn view-btn">View Course</button>
+                            <button class="action-btn cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop&q=60"
+                        alt="ChatGPT Course">
+                    <div class="course-details">
+                        <h4>Course Details:</h4>
+                        <ul>
+                            <li>How to recognize the role of ChatGPT in digital marketing</li>
+                            <li>How to identify the functions of ChatGPT that can be used for improving digital
+                                marketing strategy</li>
+                            <li>How to optimize daily marketing routine with the help of ChatGPT</li>
+                        </ul>
+                    </div>
+                    <span class="badge premium">Premium</span>
+                    <span class="badge bestseller">Bestseller</span>
+                </div>
+                <div class="course-info">
+                    <h3>ChatGPT Complete Guide: Learn Generative AI, ChatGPT & More</h3>
+                    <p class="instructor">Julian Melanson, Benza Maman</p>
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-number">4.5</span>
+                        <span class="reviews">(44,274)</span>
+                    </div>
+                    <div class="price-action">
+                        <span class="price">₹2,699</span>
+                        <div class="button-group">
+                            <button class="action-btn view-btn">View Course</button>
+                            <button class="action-btn cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop&q=60"
+                        alt="ChatGPT Course">
+                    <div class="course-details">
+                        <h4>Course Details:</h4>
+                        <ul>
+                            <li>How to recognize the role of ChatGPT in digital marketing</li>
+                            <li>How to identify the functions of ChatGPT that can be used for improving digital
+                                marketing strategy</li>
+                            <li>How to optimize daily marketing routine with the help of ChatGPT</li>
+                        </ul>
+                    </div>
+                    <span class="badge premium">Premium</span>
+                    <span class="badge bestseller">Bestseller</span>
+                </div>
+                <div class="course-info">
+                    <h3>ChatGPT Complete Guide: Learn Generative AI, ChatGPT & More</h3>
+                    <p class="instructor">Julian Melanson, Benza Maman</p>
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-number">4.5</span>
+                        <span class="reviews">(44,274)</span>
+                    </div>
+                    <div class="price-action">
+                        <span class="price">₹2,699</span>
+                        <div class="button-group">
+                            <button class="action-btn view-btn">View Course</button>
+                            <button class="action-btn cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop&q=60"
+                        alt="ChatGPT Course">
+                    <div class="course-details">
+                        <h4>Course Details:</h4>
+                        <ul>
+                            <li>How to recognize the role of ChatGPT in digital marketing</li>
+                            <li>How to identify the functions of ChatGPT that can be used for improving digital
+                                marketing strategy</li>
+                            <li>How to optimize daily marketing routine with the help of ChatGPT</li>
+                        </ul>
+                    </div>
+                    <span class="badge premium">Premium</span>
+                    <span class="badge bestseller">Bestseller</span>
+                </div>
+                <div class="course-info">
+                    <h3>ChatGPT Complete Guide: Learn Generative AI, ChatGPT & More</h3>
+                    <p class="instructor">Julian Melanson, Benza Maman</p>
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-number">4.5</span>
+                        <span class="reviews">(44,274)</span>
+                    </div>
+                    <div class="price-action">
+                        <span class="price">₹2,699</span>
+                        <div class="button-group">
+                            <button class="action-btn view-btn">View Course</button>
+                            <button class="action-btn cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop&q=60"
+                        alt="ChatGPT Course">
+                    <div class="course-details">
+                        <h4>Course Details:</h4>
+                        <ul>
+                            <li>How to recognize the role of ChatGPT in digital marketing</li>
+                            <li>How to identify the functions of ChatGPT that can be used for improving digital
+                                marketing strategy</li>
+                            <li>How to optimize daily marketing routine with the help of ChatGPT</li>
+                        </ul>
+                    </div>
+                    <span class="badge premium">Premium</span>
+                    <span class="badge bestseller">Bestseller</span>
+                </div>
+                <div class="course-info">
+                    <h3>ChatGPT Complete Guide: Learn Generative AI, ChatGPT & More</h3>
+                    <p class="instructor">Julian Melanson, Benza Maman</p>
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-number">4.5</span>
+                        <span class="reviews">(44,274)</span>
+                    </div>
+                    <div class="price-action">
+                        <span class="price">₹2,699</span>
+                        <div class="button-group">
+                            <button class="action-btn view-btn">View Course</button>
+                            <button class="action-btn cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- More course cards would be dynamically added here -->
+        </div>
+
+        <div class="show-all">
+            <button class="show-all-btn">Show all Data Science courses</button>
+        </div>
+    </main>
+
+    <script>
+        // // Domain navigation
+        // const domainBtns = document.querySelectorAll('.domain-btn');
+        // domainBtns.forEach(btn => {
+        //     btn.addEventListener('click', () => {
+        //         domainBtns.forEach(b => b.classList.remove('active'));
+        //         btn.classList.add('active');
+        //     });
+        // });
+
+        // // Course card hover effects
+        // document.querySelectorAll('.course-card').forEach(card => {
+        //     card.addEventListener('mouseenter', () => {
+        //         const btn = card.querySelector('.action-btn');
+        //         btn.textContent = 'Add to cart';
+        //         btn.classList.add('cart-btn');
+        //     });
+
+        //     card.addEventListener('mouseleave', () => {
+        //         const btn = card.querySelector('.action-btn');
+        //         btn.textContent = 'View Course';
+        //         btn.classList.remove('cart-btn');
+        //     });
+        // });
+
+        // // Category carousel
+        // let categoryIndex = 0;
+        // const categoriesWrapper = document.querySelector('.categories-wrapper');
+        // const categories = document.querySelector('.categories');
+
+        // function scrollCategories(direction) {
+        //     const step = 280;
+        //     const maxScroll = categories.scrollWidth - categoriesWrapper.clientWidth;
+
+        //     if (direction === 'left') {
+        //         categoryIndex = Math.max(0, categoryIndex - step);
+        //     } else {
+        //         categoryIndex = Math.min(maxScroll, categoryIndex + step);
+        //     }
+
+        //     categories.style.transform = `translateX(-${categoryIndex}px)`;
+        // }
+
+        // document.addEventListener("DOMContentLoaded", function () {
+        //     document.querySelectorAll(".add-to-cart-btn").forEach(button => {
+        //         button.addEventListener("click", function () {
+        //             let courseId = this.dataset.courseId;  // Get course ID
+        //             let courseTitle = this.dataset.courseTitle;
+        //             let coursePrice = this.dataset.coursePrice;
+        //             let courseImage = this.dataset.courseImage;
+
+        //             fetch("/add_to_cart", {
+        //                 method: "POST",
+        //                 headers: { "Content-Type": "application/json" },
+        //                 body: JSON.stringify({
+        //                     id: courseId,
+        //                     title: courseTitle,
+        //                     price: coursePrice,
+        //                     image: courseImage
+        //                 })
+        //             })
+        //                 .then(response => response.json())
+        //                 .then(data => {
+        //                     alert(data.message);
+        //                 });
+        //         });
+        //     });
+        // });
+
+
+    </script>
+    {%endblock%}
+</body>
+
+</html>
