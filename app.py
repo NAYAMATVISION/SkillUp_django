@@ -317,7 +317,11 @@ def AIML():
 
 @app.route('/checkout')
 def checkout():
-    return render_template('checkout.html')
+    
+        # Here, you would handle the payment processing
+        # For demonstration, we'll just flash a success message
+        
+        return render_template('checkout.html')
 
 
 # Route for Cart Page
