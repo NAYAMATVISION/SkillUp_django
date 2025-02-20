@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -81,7 +83,46 @@
             <!-- Data Science Courses -->
             <div class="course-card">
                 <div class="course-image">
-                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop&q=60"
+                    <img src="{{url_for('static', filename='images/fullstack.png')}}" alt="ChatGPT Course">
+                    <div class="course-details">
+                        <h4>Course Details:</h4>
+                        <ul>
+                            <li>How to recognize the role of ChatGPT in digital marketing</li>
+                            <li>How to identify the functions of ChatGPT that can be used for improving digital
+                                marketing strategy</li>
+                            <li>How to optimize daily marketing routine with the help of ChatGPT</li>
+                        </ul>
+                    </div>
+                    <span class="badge premium">Premium</span>
+                    <span class="badge bestseller">Bestseller</span>
+                </div>
+                <div class="course-info">
+                    <h3>Full Stack Web Development Course using HTML, CSS, JS, Node.js</h3>
+                    <p class="instructor">Julian Melanson, Benza Maman</p>
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-number">4.5</span>
+                        <span class="reviews">(44,274)</span>
+                    </div>
+                    <div class="price-action">
+                        <span class="price">$ 69.99</span>
+                        <div class="button-group">
+                            <a href="{{url_for('fullstack_webdev')}}"><button class="action-btn view-btn">View
+                                    Course</button></a>
+
+                                    <form method="POST" action="{{ url_for('add_to_cart') }}">
+                                        <input type="hidden" name="course_id" value="fs010">
+                                        <input type="hidden" name="course_name" value="Full Stack Development">
+                                        <input type="hidden" name="price" value="69.99">
+                                        <button type="submit" class="action-btn cart-btn">Add to Cart</button>
+                                    </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="{{url_for('static', filename='images/ai2.avif')}}"
                         alt="ChatGPT Course">
                     <div class="course-details">
                         <h4>Course Details:</h4>
@@ -104,50 +145,22 @@
                         <span class="reviews">(44,274)</span>
                     </div>
                     <div class="price-action">
-                        <span class="price">₹2,699</span>
+                        <span class="price">$99.99</span>
                         <div class="button-group">
-                            <a href="{{url_for('coursedetail')}}"><button class="action-btn view-btn">View Course</button></a>
-                            <button class="action-btn cart-btn">Add to Cart</button>
+                            <a href="{{url_for('AIML')}}"></a><button class="action-btn view-btn">View Course</button>
+                            <form method="POST" action="{{ url_for('add_to_cart') }}">
+                                <input type="hidden" name="course_id" value="cg101">
+                                <input type="hidden" name="course_name" value="Chat GPT Complete Guide">
+                                <input type="hidden" name="price" value="99.99">
+                                <button type="submit" class="action-btn cart-btn">Add to Cart</button>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="course-card">
                 <div class="course-image">
-                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop&q=60"
-                        alt="ChatGPT Course">
-                    <div class="course-details">
-                        <h4>Course Details:</h4>
-                        <ul>
-                            <li>How to recognize the role of ChatGPT in digital marketing</li>
-                            <li>How to identify the functions of ChatGPT that can be used for improving digital
-                                marketing strategy</li>
-                            <li>How to optimize daily marketing routine with the help of ChatGPT</li>
-                        </ul>
-                    </div>
-                    <span class="badge premium">Premium</span>
-                    <span class="badge bestseller">Bestseller</span>
-                </div>
-                <div class="course-info">
-                    <h3>ChatGPT Complete Guide: Learn Generative AI, ChatGPT & More</h3>
-                    <p class="instructor">Julian Melanson, Benza Maman</p>
-                    <div class="rating">
-                        <span class="stars">★★★★☆</span>
-                        <span class="rating-number">4.5</span>
-                        <span class="reviews">(44,274)</span>
-                    </div>
-                    <div class="price-action">
-                        <span class="price">₹2,699</span>
-                        <div class="button-group">
-                            <button class="action-btn view-btn">View Course</button>
-                            <button class="action-btn cart-btn">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="course-card">
-                <div class="course-image">
-                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop&q=60"
+                    <img src="{{url_for('static', filename='images/r.webp')}}"
                         alt="ChatGPT Course">
                     <div class="course-details">
                         <h4>Course Details:</h4>
@@ -163,7 +176,7 @@
                 </div>
 
                 <div class="course-info">
-                    <h3>ChatGPT Complete Guide: Learn Generative AI, ChatGPT & More</h3>
+                    <h3>R Programming A-Z™: R For Data Science With Real Exercises!</h3>
                     <p class="instructor">Julian Melanson, Benza Maman</p>
                     <div class="rating">
                         <span class="stars">★★★★☆</span>
@@ -171,10 +184,15 @@
                         <span class="reviews">(44,274)</span>
                     </div>
                     <div class="price-action">
-                        <span class="price">₹2,699</span>
+                        <span class="price">$ 89.99</span>
                         <div class="button-group">
                             <button class="action-btn view-btn">View Course</button>
-                            <button class="action-btn cart-btn">Add to Cart</button>
+                            <form method="POST" action="{{ url_for('add_to_cart') }}">
+                                <input type="hidden" name="course_id" value="rs010">
+                                <input type="hidden" name="course_name" value="R Programming A-Z™: R For Data Science With Real Exercises!">
+                                <input type="hidden" name="price" value="89.99">
+                                <button type="submit" class="action-btn cart-btn">Add to Cart</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -182,7 +200,7 @@
             </div>
             <div class="course-card">
                 <div class="course-image">
-                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop&q=60"
+                    <img src="{{url_for('static', filename='images/python.jpg')}}"
                         alt="ChatGPT Course">
                     <div class="course-details">
                         <h4>Course Details:</h4>
@@ -197,7 +215,7 @@
                     <span class="badge bestseller">Bestseller</span>
                 </div>
                 <div class="course-info">
-                    <h3>ChatGPT Complete Guide: Learn Generative AI, ChatGPT & More</h3>
+                    <h3>Data Manipulation in Python: Master Python, Numpy & Pandas</h3>
                     <p class="instructor">Julian Melanson, Benza Maman</p>
                     <div class="rating">
                         <span class="stars">★★★★☆</span>
@@ -205,17 +223,22 @@
                         <span class="reviews">(44,274)</span>
                     </div>
                     <div class="price-action">
-                        <span class="price">₹2,699</span>
+                        <span class="price">$ 69.99</span>
                         <div class="button-group">
                             <button class="action-btn view-btn">View Course</button>
-                            <button class="action-btn cart-btn">Add to Cart</button>
+                            <form method="POST" action="{{ url_for('add_to_cart') }}">
+                                <input type="hidden" name="course_id" value="dm010">
+                                <input type="hidden" name="course_name" value="Data Manipulation in Python: Master Python, Numpy & Pandas">
+                                <input type="hidden" name="price" value="69.99">
+                                <button type="submit" class="action-btn cart-btn">Add to Cart</button>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="course-card">
                 <div class="course-image">
-                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop&q=60"
+                    <img src="{{url_for('static', filename='images/download.jpg')}}"
                         alt="ChatGPT Course">
                     <div class="course-details">
                         <h4>Course Details:</h4>
@@ -230,7 +253,7 @@
                     <span class="badge bestseller">Bestseller</span>
                 </div>
                 <div class="course-info">
-                    <h3>ChatGPT Complete Guide: Learn Generative AI, ChatGPT & More</h3>
+                    <h3>Complete Guide to TensorFlow for Deep Learning with Python</h3>
                     <p class="instructor">Julian Melanson, Benza Maman</p>
                     <div class="rating">
                         <span class="stars">★★★★☆</span>
@@ -238,17 +261,22 @@
                         <span class="reviews">(44,274)</span>
                     </div>
                     <div class="price-action">
-                        <span class="price">₹2,699</span>
+                        <span class="price">$ 129.99</span>
                         <div class="button-group">
                             <button class="action-btn view-btn">View Course</button>
-                            <button class="action-btn cart-btn">Add to Cart</button>
+                            <form method="POST" action="{{ url_for('add_to_cart') }}">
+                                <input type="hidden" name="course_id" value="tf010">
+                                <input type="hidden" name="course_name" value="Complete Guide to TensorFlow for Deep Learning with Python">
+                                <input type="hidden" name="price" value="129.99">
+                                <button type="submit" class="action-btn cart-btn">Add to Cart</button>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="course-card">
                 <div class="course-image">
-                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop&q=60"
+                    <img src="{{url_for('static', filename='images/ai.jpg')}}"
                         alt="ChatGPT Course">
                     <div class="course-details">
                         <h4>Course Details:</h4>
@@ -263,7 +291,7 @@
                     <span class="badge bestseller">Bestseller</span>
                 </div>
                 <div class="course-info">
-                    <h3>ChatGPT Complete Guide: Learn Generative AI, ChatGPT & More</h3>
+                    <h3>Modern Artificial Intelligence Masterclass: Build 6 Projects</h3>
                     <p class="instructor">Julian Melanson, Benza Maman</p>
                     <div class="rating">
                         <span class="stars">★★★★☆</span>
@@ -271,17 +299,22 @@
                         <span class="reviews">(44,274)</span>
                     </div>
                     <div class="price-action">
-                        <span class="price">₹2,699</span>
+                        <span class="price">$ 69.99</span>
                         <div class="button-group">
                             <button class="action-btn view-btn">View Course</button>
-                            <button class="action-btn cart-btn">Add to Cart</button>
+                            <form method="POST" action="{{ url_for('add_to_cart') }}">
+                                <input type="hidden" name="course_id" value="mai010">
+                                <input type="hidden" name="course_name" value="Modern Artificial Intelligence Masterclass: Build 6 Projects">
+                                <input type="hidden" name="price" value="69.99">
+                                <button type="submit" class="action-btn cart-btn">Add to Cart</button>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="course-card">
                 <div class="course-image">
-                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop&q=60"
+                    <img src="{{url_for('static', filename='images/nlp.jpg')}}"
                         alt="ChatGPT Course">
                     <div class="course-details">
                         <h4>Course Details:</h4>
@@ -296,7 +329,7 @@
                     <span class="badge bestseller">Bestseller</span>
                 </div>
                 <div class="course-info">
-                    <h3>ChatGPT Complete Guide: Learn Generative AI, ChatGPT & More</h3>
+                    <h3>Data Science: Natural Language Processing (NLP) in Python</h3>
                     <p class="instructor">Julian Melanson, Benza Maman</p>
                     <div class="rating">
                         <span class="stars">★★★★☆</span>
@@ -304,17 +337,22 @@
                         <span class="reviews">(44,274)</span>
                     </div>
                     <div class="price-action">
-                        <span class="price">₹2,699</span>
+                        <span class="price">$ 69.99</span>
                         <div class="button-group">
                             <button class="action-btn view-btn">View Course</button>
-                            <button class="action-btn cart-btn">Add to Cart</button>
+                            <form method="POST" action="{{ url_for('add_to_cart') }}">
+                                <input type="hidden" name="course_id" value="nlp010">
+                                <input type="hidden" name="course_name" value="Data Science: Natural Language Processing (NLP) in Python">
+                                <input type="hidden" name="price" value="69.99">
+                                <button type="submit" class="action-btn cart-btn">Add to Cart</button>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="course-card">
                 <div class="course-image">
-                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop&q=60"
+                    <img src="{{url_for('static', filename='images/statistics.png')}}"
                         alt="ChatGPT Course">
                     <div class="course-details">
                         <h4>Course Details:</h4>
@@ -329,7 +367,7 @@
                     <span class="badge bestseller">Bestseller</span>
                 </div>
                 <div class="course-info">
-                    <h3>ChatGPT Complete Guide: Learn Generative AI, ChatGPT & More</h3>
+                    <h3>Statistics for Data Science and Business Analysis</h3>
                     <p class="instructor">Julian Melanson, Benza Maman</p>
                     <div class="rating">
                         <span class="stars">★★★★☆</span>
@@ -337,10 +375,15 @@
                         <span class="reviews">(44,274)</span>
                     </div>
                     <div class="price-action">
-                        <span class="price">₹2,699</span>
+                        <span class="price">$ 69.99</span>
                         <div class="button-group">
                             <button class="action-btn view-btn">View Course</button>
-                            <button class="action-btn cart-btn">Add to Cart</button>
+                            <form method="POST" action="{{ url_for('add_to_cart') }}">
+                                <input type="hidden" name="course_id" value="st010">
+                                <input type="hidden" name="course_name" value="Statistics for Data Science and Business Analysis">
+                                <input type="hidden" name="price" value="69.99">
+                                <button type="submit" class="action-btn cart-btn">Add to Cart</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -353,77 +396,9 @@
         </div>
     </main>
 
-    <script>
-        // // Domain navigation
-        // const domainBtns = document.querySelectorAll('.domain-btn');
-        // domainBtns.forEach(btn => {
-        //     btn.addEventListener('click', () => {
-        //         domainBtns.forEach(b => b.classList.remove('active'));
-        //         btn.classList.add('active');
-        //     });
-        // });
-
-        // // Course card hover effects
-        // document.querySelectorAll('.course-card').forEach(card => {
-        //     card.addEventListener('mouseenter', () => {
-        //         const btn = card.querySelector('.action-btn');
-        //         btn.textContent = 'Add to cart';
-        //         btn.classList.add('cart-btn');
-        //     });
-
-        //     card.addEventListener('mouseleave', () => {
-        //         const btn = card.querySelector('.action-btn');
-        //         btn.textContent = 'View Course';
-        //         btn.classList.remove('cart-btn');
-        //     });
-        // });
-
-        // // Category carousel
-        // let categoryIndex = 0;
-        // const categoriesWrapper = document.querySelector('.categories-wrapper');
-        // const categories = document.querySelector('.categories');
-
-        // function scrollCategories(direction) {
-        //     const step = 280;
-        //     const maxScroll = categories.scrollWidth - categoriesWrapper.clientWidth;
-
-        //     if (direction === 'left') {
-        //         categoryIndex = Math.max(0, categoryIndex - step);
-        //     } else {
-        //         categoryIndex = Math.min(maxScroll, categoryIndex + step);
-        //     }
-
-        //     categories.style.transform = `translateX(-${categoryIndex}px)`;
-        // }
-
-        // document.addEventListener("DOMContentLoaded", function () {
-        //     document.querySelectorAll(".add-to-cart-btn").forEach(button => {
-        //         button.addEventListener("click", function () {
-        //             let courseId = this.dataset.courseId;  // Get course ID
-        //             let courseTitle = this.dataset.courseTitle;
-        //             let coursePrice = this.dataset.coursePrice;
-        //             let courseImage = this.dataset.courseImage;
-
-        //             fetch("/add_to_cart", {
-        //                 method: "POST",
-        //                 headers: { "Content-Type": "application/json" },
-        //                 body: JSON.stringify({
-        //                     id: courseId,
-        //                     title: courseTitle,
-        //                     price: coursePrice,
-        //                     image: courseImage
-        //                 })
-        //             })
-        //                 .then(response => response.json())
-        //                 .then(data => {
-        //                     alert(data.message);
-        //                 });
-        //         });
-        //     });
-        // });
 
 
-    </script>
+
     {%endblock%}
 </body>
 

@@ -53,11 +53,17 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link btn btn-dark text-white" href="#">
+                                <img src="#" alt="🔔Notifications" height="30">
+                            </a>
+                        </li>
+                        {% if current_user.role != "admin" %}
+                        <li class="nav-item">
                             <a class="nav-link" href="{{url_for('cart')}}">
                                 <img src="{{ url_for('static', filename='images/cart4.png') }}" alt="Cart" height="30">
                             </a>
                         </li>
-
+                        {% endif %}
                         <!-- User Profile Dropdown -->
 
                         <li class="nav-item dropdown">
@@ -70,7 +76,7 @@
 
                                 {% if current_user.role == "admin" %}
 
-                                <li><a class="dropdown-item" href="{{ url_for('courses') }}">📚 My Courses</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('createcourse') }}">📚 Create Courses</a></li>
 
 
                                 <li><a class="dropdown-item" href="">📊 Monitor Performance</a></li>
@@ -100,6 +106,7 @@
                                 <img src="#" alt="Plans and Pricing" height="30">
                             </a>
                         </li>
+                       
                         <li class="nav-item">
                             <a class="nav-link btn btn-dark text-white" href="{{url_for('login')}}">Login</a>
                         </li>

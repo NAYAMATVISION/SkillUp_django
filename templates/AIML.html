@@ -110,7 +110,7 @@
                 <input type="hidden" name="course_id" value="aiml101">
                 <input type="hidden" name="course_name" value="AI & Machine Learning Mastery">
                 <input type="hidden" name="price" value="5999">
-                <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                <a href="{{ url_for('add_to_cart') }}"><button type="submit" class="add-to-cart-btn">Add to Cart</button></a>
             </form>
         </div>
         <div class="price-card">

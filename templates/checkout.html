@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,7 +12,7 @@
     {% block content %}
     <div class="checkout-container">
         
-        <!-- Left Section - Billing & Payment -->
+       
         <section class="billing-section">
             <h2>Checkout</h2>
 
@@ -31,7 +31,6 @@
                 </select>
             </div>
 
-            <!-- Payment Methods -->
             <h3>Payment method</h3>
             <div class="payment-methods">
                 
@@ -81,21 +80,21 @@
 
             </div>
 
-            <!-- Order Details -->
+            
             <h3>Order details (1 course)</h3>
             <div class="order-details">
                 <img src="{{ url_for('static', filename='images/client1.jpg') }}" alt="Generative AI for Beginners">
                 <p>Generative AI for Beginners</p>
-                <p class="price">₹799</p>
+                <p class="price">${{ total_price }}</p>
             </div>
         </section>
 
-        <!-- Right Section - Order Summary -->
+        
         <aside class="order-summary">
             <h3>Order summary</h3>
-            <p>Original Price: <span>₹799</span></p>
-            <p class="total">Total (1 course): <span>₹799</span></p>
-            <button class="pay-btn">Pay ₹799</button>
+            <p>Original Price: <span>${{ total_price }}</span></p>
+            <p class="total">Total (1 course): <span>${{ total_price }}</span></p>
+            <button class="pay-btn">Pay ${{ total_price }}</button>
 
             <div class="money-back">
                 <p>30-Day Money-Back Guarantee</p>
@@ -111,4 +110,5 @@
     </div>
 {%endblock%}
 </body>
-</html>
+</html> 
+
