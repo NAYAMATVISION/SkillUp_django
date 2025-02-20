@@ -14,7 +14,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #5624d0; /* Udemy Purple */
+    background-color: #3B1E54; /* Udemy Purple */
     color: white;
     padding: 60px 8%;
 }
@@ -153,7 +153,7 @@ body {
 
 .instructor-card h3 {
     font-size: 1.5rem;
-    color: #5624d0;
+    color: #3B1E54;
 }
 
 /* ======= TESTIMONIALS ======= */
@@ -238,14 +238,14 @@ body {
 
 .price-card strong {
     font-size: 1.5rem;
-    color: #5624d0;
+    color: #3B1E54;
 }
 
 .price-card button {
     display: block;
     width: 100%;
     padding: 12px;
-    background: #5624d0;
+    background: #3B1E54;
     color: white;
     border: none;
     font-size: 1.1rem;

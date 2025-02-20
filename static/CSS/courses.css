@@ -254,7 +254,7 @@ header p {
     content: '✓';
     position: absolute;
     left: 0;
-    color: #a435f0;
+    color: #9B7EBD;
 }
 
 .badge {
@@ -266,7 +266,7 @@ header p {
 }
 
 .badge.premium {
-    background-color: #a435f0;
+    background-color: #9B7EBD;
     color: white;
     top: 0.75rem;
     left: 0.75rem;
@@ -357,8 +357,8 @@ header p {
 
 .show-all-btn {
     background: none;
-    border: 1px solid #a435f0;
-    color: #a435f0;
+    border: 1px solid #9B7EBD;
+    color: #9B7EBD;
     padding: 0.75rem 1.5rem;
     font-weight: 600;
     cursor: pointer;
@@ -366,7 +366,7 @@ header p {
 }
 
 .show-all-btn:hover {
-    background-color: #a435f0;
+    background-color: #9B7EBD;
     color: white;
 }
 /* Update price-action styling */
@@ -407,14 +407,14 @@ header p {
 }
 
 .cart-btn {
-    background-color: #a435f0;
-    border: 1px solid #a435f0;
+    background-color: #9B7EBD;
+    border: 1px solid #9B7EBD;
     color: white;
 }
 
 .cart-btn:hover {
-    background-color: #8710d9;
-    border-color: #8710d9;
+    background-color: #9B7EBD;
+    border-color: #9B7EBD;
 }
 
 /* Responsive adjustments */

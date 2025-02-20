@@ -18,7 +18,7 @@ body {
 
 h2 {
     text-align: center;
-    color: #5624d0;
+    color: #3B1E54;
 }
 
 .cart-table {
@@ -39,7 +39,7 @@ h2 {
 }
 
 .remove-btn {
-    background: #ff4d4d;
+    background: #D4BEE4;
     color: #ffffff;
     padding: 8px 12px;
     text-decoration: none;
@@ -49,7 +49,7 @@ h2 {
 }
 
 .remove-btn:hover {
-    background: #e63939;
+    background: #D4BEE4;
 }
 
 .cart-summary {
@@ -74,19 +74,19 @@ h2 {
 }
 
 .clear-btn {
-    background: #ff4d4d;
+    background: #3B1E54;
     color: white;
 }
 
 .clear-btn:hover {
-    background: #e63939;
+    background: #3B1E54;
 }
 
 .checkout-btn {
-    background: #5624d0;
+    background: #3B1E54;
     color: white;
 }
 
 .checkout-btn:hover {
-    background: #3e1a9a;
+    background: #3B1E54;
 }

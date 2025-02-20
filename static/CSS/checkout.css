@@ -1,4 +1,4 @@
-/* General Reset */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f8f8;
@@ -6,7 +6,7 @@ body {
     padding: 0;
   }
   
-  /* Checkout Container */
+ 
   .checkout-container {
     display: flex;
     justify-content: space-between;
@@ -18,7 +18,7 @@ body {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
   
-  /* Left Section */
+
   .billing-section {
     flex: 2;
     padding-right: 30px;
@@ -28,7 +28,7 @@ body {
     margin-bottom: 10px;
   }
   
-  /* Input Fields */
+
   input, select {
     width: 100%;
     padding: 8px;
@@ -36,8 +36,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
   }
-  
-  /* Payment Options */
+
   .payment-option {
     display: flex;
     align-items: center;
@@ -45,7 +44,7 @@ body {
     margin: 10px 0;
   }
   
-  /* Radio Button & Label */
+
   .payment-option input {
     width: auto;
     margin: 0;
@@ -55,7 +54,7 @@ body {
     cursor: pointer;
   }
   
-  /* Card Details */
+
   .card-details input {
     display: block;
     margin-top: 8px;
@@ -71,7 +70,7 @@ body {
     flex: 1;
   }
   
-  /* Checkbox */
+
   .checkbox-container {
     display: flex;
     align-items: center;
@@ -79,7 +78,7 @@ body {
     margin-top: 10px;
   }
   
-  /* Order Details */
+
   .order-details {
     display: flex;
     align-items: center;
@@ -94,7 +93,7 @@ body {
     border-radius: 5px;
   }
   
-  /* Right Section - Order Summary */
+
   .order-summary {
     flex: 1;
     background: #fafafa;
@@ -133,14 +132,14 @@ body {
     background-color: black;
   }
   
-  /* Money Back Guarantee */
+ 
   .money-back {
     margin-top: 20px;
     font-size: 14px;
     color: #333;
   }
   
-  /* Success Box */
+
   .success-box {
     background: #fff3cd;
     padding: 10px;
@@ -152,4 +151,6 @@ body {
   .success-box p {
     font-weight: bold;
     color: #856404;
-  }
+  }  
+
+
