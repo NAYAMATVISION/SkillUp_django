@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillUp|Create New Course</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+    .course-card {
+    width: 300px;  /* Fixed width for all course cards */
+    height: 400px; /* Fixed height for uniform size */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.course-image {
+    width: 100%;  /* Makes sure the image covers the container */
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Ensures the image fits without stretching */
+    border-radius: 5px;
+}
+
+.course-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.course-description {
+    font-size: 14px;
+    color: #555;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    /* -webkit-line-clamp: 3; /* Limits text to 3 lines */
+    -webkit-box-orient: vertical; 
+}
+
+</style>
+
+<body class="bg-light">
+    {% extends 'base.html' %}
+
+{% block content %}
+<div class="container my-5">
+    <h2>Create a New Course</h2>
+
+    <!-- Restrict Page Access -->
+    {% if current_user.is_authenticated and current_user.role == "admin" %}
+    
+        <!-- Course Creation Form -->
+        <form action="{{ url_for('createcourse') }}" method="POST">
+            <div class="mb-3">
+                <label for="title" class="form-label">Course Title</label>
+                <input type="text" class="form-control" id="title" name="title" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="description" class="form-label">Course Description</label>
+                <textarea class="form-control" id="description" name="description" required></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label for="image_url" class="form-label">Course Image URL</label>
+                <input type="text" class="form-control" id="image_url" name="image_url">
+                <small class="form-text text-muted">Optional: Add a URL for the course image.</small>
+            </div>
+
+            <button type="submit" class="btn btn-dark">Create Course</button>
+        </form>
+
+    {% else %}
+        <div class="alert alert-danger" role="alert">
+            Access Denied! Only Admins can access this page.
+        </div>
+    {% endif %}
+
+    <a href="{{ url_for('admindashboard') }}" class="btn btn-secondary mt-3">Back to Dashboard</a>
+</div>
+{% endblock %}
+
+</body>
+
+</html>

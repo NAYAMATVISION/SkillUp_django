@@ -1,0 +1,405 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillUp|Course Platform</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='CSS/courses.css' )}}">
+</head>
+
+<body>
+    {% extends 'base.html' %}
+
+    {% block content %}
+    <header>
+        <div class="container">
+            <h1>All the skills you need in one place</h1>
+            <p>From critical skills to technical topics, Udemy supports your professional development.</p>
+        </div>
+    </header>
+
+    <nav class="domain-nav">
+        <div class="container">
+            <button class="domain-btn active" data-domain="data-science">Data Science</button>
+            <button class="domain-btn" data-domain="it-cert">IT Certifications</button>
+            <button class="domain-btn" data-domain="leadership">Leadership</button>
+            <button class="domain-btn" data-domain="web-dev">Web Development</button>
+            <button class="domain-btn" data-domain="communication">Communication</button>
+            <button class="domain-btn" data-domain="business">Business Analytics & Intelligence</button>
+        </div>
+    </nav>
+
+    <div class="categories-carousel">
+        <div class="container">
+            <!-- <button class="carousel-btn prev" onclick="scrollCategories('left')">&lt;</button> -->
+            <div class="categories-wrapper">
+                <div class="categories" id="categories">
+                    <!-- Data Science Categories -->
+                    <div class="category-group active" data-domain="data-science">
+                        <div class="category-pill">
+                            <h3>ChatGPT</h3>
+                            <p>4M+ learners</p>
+                        </div>
+                        <div class="category-pill">
+                            <h3>Data Science</h3>
+                            <p>7M+ learners</p>
+                        </div>
+                        <div class="category-pill">
+                            <h3>Python</h3>
+                            <p>47.7M+ learners</p>
+                        </div>
+                        <div class="category-pill">
+                            <h3>Machine Learning</h3>
+                            <p>8M+ learners</p>
+                        </div>
+                        <div class="category-pill">
+                            <h3>Deep Learning</h3>
+                            <p>2M+ learners</p>
+                        </div>
+                        <div class="category-pill">
+                            <h3>Artificial Intelligence (AI)</h3>
+                            <p>3M+ learners</p>
+                        </div>
+                        <div class="category-pill">
+                            <h3>Statistics</h3>
+                            <p>1M+ learners</p>
+                        </div>
+                        <!-- <div class="category-pill">
+                            <h3>Natural Language</h3>
+                            <p>800K+ learners</p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <!-- <button class="carousel-btn next" onclick="scrollCategories('right')">&gt;</button> -->
+        </div>
+    </div>
+
+    <main class="container">
+        <div class="course-grid">
+            <!-- Data Science Courses -->
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="{{url_for('static', filename='images/fullstack.png')}}" alt="ChatGPT Course">
+                    <div class="course-details">
+                        <h4>Course Details:</h4>
+                        <ul>
+                            <li>How to recognize the role of ChatGPT in digital marketing</li>
+                            <li>How to identify the functions of ChatGPT that can be used for improving digital
+                                marketing strategy</li>
+                            <li>How to optimize daily marketing routine with the help of ChatGPT</li>
+                        </ul>
+                    </div>
+                    <span class="badge premium">Premium</span>
+                    <span class="badge bestseller">Bestseller</span>
+                </div>
+                <div class="course-info">
+                    <h3>Full Stack Web Development Course using HTML, CSS, JS, Node.js</h3>
+                    <p class="instructor">Julian Melanson, Benza Maman</p>
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-number">4.5</span>
+                        <span class="reviews">(44,274)</span>
+                    </div>
+                    <div class="price-action">
+                        <span class="price">$ 69.99</span>
+                        <div class="button-group">
+                            <a href="{{url_for('fullstack_webdev')}}"><button class="action-btn view-btn">View
+                                    Course</button></a>
+
+                                    <form method="POST" action="{{ url_for('add_to_cart') }}">
+                                        <input type="hidden" name="course_id" value="fs010">
+                                        <input type="hidden" name="course_name" value="Full Stack Development">
+                                        <input type="hidden" name="price" value="69.99">
+                                        <button type="submit" class="action-btn cart-btn">Add to Cart</button>
+                                    </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="{{url_for('static', filename='images/ai2.avif')}}"
+                        alt="ChatGPT Course">
+                    <div class="course-details">
+                        <h4>Course Details:</h4>
+                        <ul>
+                            <li>How to recognize the role of ChatGPT in digital marketing</li>
+                            <li>How to identify the functions of ChatGPT that can be used for improving digital
+                                marketing strategy</li>
+                            <li>How to optimize daily marketing routine with the help of ChatGPT</li>
+                        </ul>
+                    </div>
+                    <span class="badge premium">Premium</span>
+                    <span class="badge bestseller">Bestseller</span>
+                </div>
+                <div class="course-info">
+                    <h3>ChatGPT Complete Guide: Learn Generative AI, ChatGPT & More</h3>
+                    <p class="instructor">Julian Melanson, Benza Maman</p>
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-number">4.5</span>
+                        <span class="reviews">(44,274)</span>
+                    </div>
+                    <div class="price-action">
+                        <span class="price">$99.99</span>
+                        <div class="button-group">
+                            <a href="{{url_for('AIML')}}"></a><button class="action-btn view-btn">View Course</button>
+                            <form method="POST" action="{{ url_for('add_to_cart') }}">
+                                <input type="hidden" name="course_id" value="cg101">
+                                <input type="hidden" name="course_name" value="Chat GPT Complete Guide">
+                                <input type="hidden" name="price" value="99.99">
+                                <button type="submit" class="action-btn cart-btn">Add to Cart</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="{{url_for('static', filename='images/r.webp')}}"
+                        alt="ChatGPT Course">
+                    <div class="course-details">
+                        <h4>Course Details:</h4>
+                        <ul>
+                            <li>How to recognize the role of ChatGPT in digital marketing</li>
+                            <li>How to identify the functions of ChatGPT that can be used for improving digital
+                                marketing strategy</li>
+                            <li>How to optimize daily marketing routine with the help of ChatGPT</li>
+                        </ul>
+                    </div>
+                    <span class="badge premium">Premium</span>
+                    <span class="badge bestseller">Bestseller</span>
+                </div>
+
+                <div class="course-info">
+                    <h3>R Programming A-Z™: R For Data Science With Real Exercises!</h3>
+                    <p class="instructor">Julian Melanson, Benza Maman</p>
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-number">4.5</span>
+                        <span class="reviews">(44,274)</span>
+                    </div>
+                    <div class="price-action">
+                        <span class="price">$ 89.99</span>
+                        <div class="button-group">
+                            <button class="action-btn view-btn">View Course</button>
+                            <form method="POST" action="{{ url_for('add_to_cart') }}">
+                                <input type="hidden" name="course_id" value="rs010">
+                                <input type="hidden" name="course_name" value="R Programming A-Z™: R For Data Science With Real Exercises!">
+                                <input type="hidden" name="price" value="89.99">
+                                <button type="submit" class="action-btn cart-btn">Add to Cart</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="{{url_for('static', filename='images/python.jpg')}}"
+                        alt="ChatGPT Course">
+                    <div class="course-details">
+                        <h4>Course Details:</h4>
+                        <ul>
+                            <li>How to recognize the role of ChatGPT in digital marketing</li>
+                            <li>How to identify the functions of ChatGPT that can be used for improving digital
+                                marketing strategy</li>
+                            <li>How to optimize daily marketing routine with the help of ChatGPT</li>
+                        </ul>
+                    </div>
+                    <span class="badge premium">Premium</span>
+                    <span class="badge bestseller">Bestseller</span>
+                </div>
+                <div class="course-info">
+                    <h3>Data Manipulation in Python: Master Python, Numpy & Pandas</h3>
+                    <p class="instructor">Julian Melanson, Benza Maman</p>
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-number">4.5</span>
+                        <span class="reviews">(44,274)</span>
+                    </div>
+                    <div class="price-action">
+                        <span class="price">$ 69.99</span>
+                        <div class="button-group">
+                            <button class="action-btn view-btn">View Course</button>
+                            <form method="POST" action="{{ url_for('add_to_cart') }}">
+                                <input type="hidden" name="course_id" value="dm010">
+                                <input type="hidden" name="course_name" value="Data Manipulation in Python: Master Python, Numpy & Pandas">
+                                <input type="hidden" name="price" value="69.99">
+                                <button type="submit" class="action-btn cart-btn">Add to Cart</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="{{url_for('static', filename='images/download.jpg')}}"
+                        alt="ChatGPT Course">
+                    <div class="course-details">
+                        <h4>Course Details:</h4>
+                        <ul>
+                            <li>How to recognize the role of ChatGPT in digital marketing</li>
+                            <li>How to identify the functions of ChatGPT that can be used for improving digital
+                                marketing strategy</li>
+                            <li>How to optimize daily marketing routine with the help of ChatGPT</li>
+                        </ul>
+                    </div>
+                    <span class="badge premium">Premium</span>
+                    <span class="badge bestseller">Bestseller</span>
+                </div>
+                <div class="course-info">
+                    <h3>Complete Guide to TensorFlow for Deep Learning with Python</h3>
+                    <p class="instructor">Julian Melanson, Benza Maman</p>
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-number">4.5</span>
+                        <span class="reviews">(44,274)</span>
+                    </div>
+                    <div class="price-action">
+                        <span class="price">$ 129.99</span>
+                        <div class="button-group">
+                            <button class="action-btn view-btn">View Course</button>
+                            <form method="POST" action="{{ url_for('add_to_cart') }}">
+                                <input type="hidden" name="course_id" value="tf010">
+                                <input type="hidden" name="course_name" value="Complete Guide to TensorFlow for Deep Learning with Python">
+                                <input type="hidden" name="price" value="129.99">
+                                <button type="submit" class="action-btn cart-btn">Add to Cart</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="{{url_for('static', filename='images/ai.jpg')}}"
+                        alt="ChatGPT Course">
+                    <div class="course-details">
+                        <h4>Course Details:</h4>
+                        <ul>
+                            <li>How to recognize the role of ChatGPT in digital marketing</li>
+                            <li>How to identify the functions of ChatGPT that can be used for improving digital
+                                marketing strategy</li>
+                            <li>How to optimize daily marketing routine with the help of ChatGPT</li>
+                        </ul>
+                    </div>
+                    <span class="badge premium">Premium</span>
+                    <span class="badge bestseller">Bestseller</span>
+                </div>
+                <div class="course-info">
+                    <h3>Modern Artificial Intelligence Masterclass: Build 6 Projects</h3>
+                    <p class="instructor">Julian Melanson, Benza Maman</p>
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-number">4.5</span>
+                        <span class="reviews">(44,274)</span>
+                    </div>
+                    <div class="price-action">
+                        <span class="price">$ 69.99</span>
+                        <div class="button-group">
+                            <button class="action-btn view-btn">View Course</button>
+                            <form method="POST" action="{{ url_for('add_to_cart') }}">
+                                <input type="hidden" name="course_id" value="mai010">
+                                <input type="hidden" name="course_name" value="Modern Artificial Intelligence Masterclass: Build 6 Projects">
+                                <input type="hidden" name="price" value="69.99">
+                                <button type="submit" class="action-btn cart-btn">Add to Cart</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="{{url_for('static', filename='images/nlp.jpg')}}"
+                        alt="ChatGPT Course">
+                    <div class="course-details">
+                        <h4>Course Details:</h4>
+                        <ul>
+                            <li>How to recognize the role of ChatGPT in digital marketing</li>
+                            <li>How to identify the functions of ChatGPT that can be used for improving digital
+                                marketing strategy</li>
+                            <li>How to optimize daily marketing routine with the help of ChatGPT</li>
+                        </ul>
+                    </div>
+                    <span class="badge premium">Premium</span>
+                    <span class="badge bestseller">Bestseller</span>
+                </div>
+                <div class="course-info">
+                    <h3>Data Science: Natural Language Processing (NLP) in Python</h3>
+                    <p class="instructor">Julian Melanson, Benza Maman</p>
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-number">4.5</span>
+                        <span class="reviews">(44,274)</span>
+                    </div>
+                    <div class="price-action">
+                        <span class="price">$ 69.99</span>
+                        <div class="button-group">
+                            <button class="action-btn view-btn">View Course</button>
+                            <form method="POST" action="{{ url_for('add_to_cart') }}">
+                                <input type="hidden" name="course_id" value="nlp010">
+                                <input type="hidden" name="course_name" value="Data Science: Natural Language Processing (NLP) in Python">
+                                <input type="hidden" name="price" value="69.99">
+                                <button type="submit" class="action-btn cart-btn">Add to Cart</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="{{url_for('static', filename='images/statistics.png')}}"
+                        alt="ChatGPT Course">
+                    <div class="course-details">
+                        <h4>Course Details:</h4>
+                        <ul>
+                            <li>How to recognize the role of ChatGPT in digital marketing</li>
+                            <li>How to identify the functions of ChatGPT that can be used for improving digital
+                                marketing strategy</li>
+                            <li>How to optimize daily marketing routine with the help of ChatGPT</li>
+                        </ul>
+                    </div>
+                    <span class="badge premium">Premium</span>
+                    <span class="badge bestseller">Bestseller</span>
+                </div>
+                <div class="course-info">
+                    <h3>Statistics for Data Science and Business Analysis</h3>
+                    <p class="instructor">Julian Melanson, Benza Maman</p>
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-number">4.5</span>
+                        <span class="reviews">(44,274)</span>
+                    </div>
+                    <div class="price-action">
+                        <span class="price">$ 69.99</span>
+                        <div class="button-group">
+                            <button class="action-btn view-btn">View Course</button>
+                            <form method="POST" action="{{ url_for('add_to_cart') }}">
+                                <input type="hidden" name="course_id" value="st010">
+                                <input type="hidden" name="course_name" value="Statistics for Data Science and Business Analysis">
+                                <input type="hidden" name="price" value="69.99">
+                                <button type="submit" class="action-btn cart-btn">Add to Cart</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- More course cards would be dynamically added here -->
+        </div>
+
+        <div class="show-all">
+            <button class="show-all-btn">Show all Data Science courses</button>
+        </div>
+    </main>
+
+
+
+
+    {%endblock%}
+</body>
+
+</html>
